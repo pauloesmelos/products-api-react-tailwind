@@ -1,14 +1,22 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Footer from './components/footer/Footer';
+import Home from './components/home/Home';
+import Error from './components/page_not_found/Error';
+import SpecifyProduct from './components/product/SpecifyProduct';
 
 const App = () => {
-  // Utilize a API abaixo para puxar a lista de produto
-  // https://ranekapi.origamid.dev/json/api/produto
-  // Cada produto possui o id, o mesmo pode ser passado na api para retornar os dados desse produto específico
-  // https://ranekapi.origamid.dev/json/api/produto/notebook
 
   return (
-    <div className="font-Poppins">
-      <h1 className="text-rose-500">hello world</h1>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/produto/:id" element={<SpecifyProduct />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   )
 }
