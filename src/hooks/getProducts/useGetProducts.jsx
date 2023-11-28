@@ -6,6 +6,7 @@ const getProducts = async () => {
     .then(response => response.data)
     .catch(erro => console.log(erro));
 }
+// não repetir a mesma key !
 const useGetProducts = () => {
   const { data: products, isLoading: loading, isError: erro } = useQuery({
     queryKey: ["get-products"],

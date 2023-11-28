@@ -5,14 +5,21 @@ import ProductCard from '../product/ProductCard';
 
 const Home = () => {
   const { products, loading } = useGetProducts();
+  React.useEffect(() => {
+    console.log(products);
+  } ,[products]);
   if(loading) return <Loading />
-  return (
-    <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-16 p-5">
-      {products.map((product, index) => (
-        <ProductCard data={product} key={index} />
-      ))}
-    </main>
-  )
+
+  else {
+    return (
+        <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-16 p-5">
+            {console.log(products)}
+          {products.map((product, index) => (
+            <ProductCard data={product} key={index} />
+          ))}
+        </main>
+      )
+  }
 }
 
 export default Home;
