@@ -9,7 +9,7 @@ const Home = () => {
     console.log(products);
   } ,[products]);
   if(loading) return <Loading />
-
+  if(!products) return null;
   else {
     return (
         <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-16 p-5 w-full max-w-[1100px] mx-auto">
