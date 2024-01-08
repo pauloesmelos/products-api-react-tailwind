@@ -8,8 +8,10 @@ import { GlobalCarrinho } from '../global/GlobalCarrinho.jsx';
 const SpecifyProduct = () => { // produto específico
   const { id } = useParams();
   const { data, isLoading} = useGetProduct(id);
-  const { unidade } = React.useContext(GlobalCarrinho);
-
+  const { unidade, reset } = React.useContext(GlobalCarrinho);
+  React.useEffect(() => {
+    reset();
+  }, []);
   if(isLoading) return <Loading />
   return (
     <section className="w-full max-w-[1000px] mx-auto bg-white rounded-md shadow-md">

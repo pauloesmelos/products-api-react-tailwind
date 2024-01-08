@@ -9,8 +9,11 @@ export const GlobalCarrinhoProvider = ({ children }) => {
   const less = () => {
     unidade > 1 ? setUnidade(unidade - 1) : setUnidade(unidade);
   }
+  const reset = () => {
+    setUnidade(1);
+  }
   return(
-    <GlobalCarrinho.Provider value={{unidade, add, less}}>
+    <GlobalCarrinho.Provider value={{unidade, add, less, reset}}>
       {children}
     </GlobalCarrinho.Provider>
   );
