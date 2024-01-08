@@ -3,10 +3,12 @@ import { useParams } from 'react-router-dom';
 import useGetProduct from '../../hooks/getProduct/useGetProduct';
 import Loading from '../loading/Loading';
 import Carrinho from './carrinho/Carrinho';
+import { GlobalCarrinho } from '../global/GlobalCarrinho.jsx';
 
 const SpecifyProduct = () => { // produto específico
   const { id } = useParams();
   const { data, isLoading} = useGetProduct(id);
+  const { unidade } = React.useContext(GlobalCarrinho);
 
   if(isLoading) return <Loading />
   return (
@@ -28,7 +30,7 @@ const SpecifyProduct = () => { // produto específico
           </div>
           <div>
             <h1 className="font-bold text-sm sm:text-xl">{data.nome}</h1>
-            <p className="text-lg sm:text-xl md:text-3xl py-8 text-red-700">R$ {data.preco}</p>
+            <p className="text-lg sm:text-xl md:text-3xl py-8 text-red-700">R$ {data.preco * unidade}</p>
             <h3>{data.descricao}</h3>
           </div>
           <div>
