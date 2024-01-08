@@ -1,5 +1,5 @@
 import React from 'react';
-import { GlobalCarrinho } from '../../hooks/global/globalCarrinho';
+import { GlobalCarrinho } from '../../global/GlobalCarrinho.jsx';
 
 const Carrinho = () => {
   const { unidade, add, less } = React.useContext(GlobalCarrinho);

@@ -5,7 +5,7 @@ import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import Error from './components/page_not_found/Error';
 import SpecifyProduct from './components/product/SpecifyProduct';
-import { GlobalCarrinho, GlobalCarrinhoProvider } from './components/hooks/global/globalCarrinho';
+import { GlobalCarrinhoProvider } from './components/global/GlobalCarrinho.jsx';
 
 const App = () => {
   
