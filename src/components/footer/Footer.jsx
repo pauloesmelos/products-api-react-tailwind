@@ -8,19 +8,23 @@ const Footer = () => {
       {/* copright and texts left */}
       <div className="p-5">
         <div>
-          <h1 className="text-blue-700 font-bold text-4xl">Shopping Web</h1>
+          <h1 className="text-blue-700 font-bold text-xl sm:text-2xl md:text-4xl">Shopping Web</h1>
         </div>
-        <div className="text-lg text-slate-600 py-5">
-          <p className="font-bold my-2">
+        <div className="text-slate-600 py-5">
+          <p className="font-bold my-2 text-lg hidden md:block md:text-2xl">
             &copy; 2023 - Maked with React and Taiwind
           </p>
           <p className="text-xl hidden lg:block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ratione asperiores animi consectetur, sunt voluptatem facere tene.</p>
         </div>
-        <div className="flex gap-16 text-slate-800">
-          <TiSocialTwitter className="cursor-pointer hover:text-indigo-800 hover:scale-110 duration-300 text-4xl" />
-          <TiSocialYoutube className="cursor-pointer hover:text-indigo-800 hover:scale-110 duration-300 text-4xl" />
-          <TiSocialLinkedin className="cursor-pointer hover:text-indigo-800 hover:scale-110 duration-300 text-4xl" />
-          <SlSocialInstagram className="cursor-pointer hover:text-indigo-800 hover:scale-110 duration-300 text-4xl" />
+        <div className="flex gap-8 text-slate-800">
+          <TiSocialTwitter 
+            className="cursor-pointer hover:text-indigo-800 hover:scale-110 duration-300 text-2xl md:text-4xl" />
+          <TiSocialYoutube 
+            className="cursor-pointer hover:text-indigo-800 hover:scale-110 duration-300 text-2xl md:text-4xl" />
+          <TiSocialLinkedin 
+            className="cursor-pointer hover:text-indigo-800 hover:scale-110 duration-300 text-2xl md:text-4xl" />
+          <SlSocialInstagram 
+            className="cursor-pointer hover:text-indigo-800 hover:scale-110 duration-300 text-2xl md:text-4xl" />
         </div>
       </div>
       {/* lists */}
